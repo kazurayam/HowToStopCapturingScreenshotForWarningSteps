@@ -6,28 +6,27 @@ import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.webui.helper.screenshot.WebUIScreenCaptor
 import com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain
 
-public class StopTakingScreenshotWhenOptional {
+public class WebUIKeywordMainModifier {
 
-	public static void manage() {
-		println("[StopTakingScreenshotWhenOptional] manage() is called")
+	public static void modify() {
+		println("[WebUIKeywordMainModifier] modify() is called")
 		WebUIKeywordMain.metaClass.'static'.invokeMethod = { String name, args ->
 			if (name == "stepFailed") {
-				println("[StopTakingScreenshotWhenOptional.manage] WebUIKeywordMain.stepFailed method is executed in a special way")
+				println("[WebUIKeywordMainModifier] WebUIKeywordMain.stepFailed method is modified and invoked")
 				assert args.size() == 4
-				// invoke the specialized 'stepFailed' method
 				String message = args[0]
 				FailureHandling flHandling = args[1]
 				Throwable t = args[2]
 				boolean takeScreenShot = args[3]
+				// I do not want screenshot when FailureHandling.OPTIONAL is given
 				if (flHandling == FailureHandling.OPTIONAL) {
-					//we do not take screenshot when we apply FailureHandling.OPTIONAL
 					takeScreenShot = false
 				}
 				return KeywordMain.stepFailed(message, flHandling, new StepFailedException(message, t),
 						new WebUIScreenCaptor().takeScreenshotAndGetAttributes(takeScreenShot));
 			} else {
 				// do as usual
-				println("[StopTakingScreenshotWhenOptional.manage] WebUIKeywordMain.${name} method is executed as usual")
+				println("[WebUIKeywordMainModifier] WebUIKeywordMain.${name} method is executed as usual")
 				return delegate.metaClass.getStaticMetaMethod(name, args).invoke(delegate, args)
 			}
 		}
