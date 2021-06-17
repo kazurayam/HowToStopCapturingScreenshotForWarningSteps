@@ -14,5 +14,5 @@ List<Path> pngs = Files.list(reportsFolder).filter { p ->
 	p.getFileName().toString().endsWith('.png')
 	}.
 	collect(Collectors.toList())
-assert pngs.size() == 0, "took screenshots:" + pngs
+assert pngs.size() == 0, "found screenshots: " + pngs
 

@@ -15,12 +15,12 @@
       <guid>b0375214-730c-4bf7-820e-3cb142ac5856</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TC1</testCaseId>
+      <testCaseId>Test Cases/TC</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>60fa5c43-681f-4677-b2af-40b0994ce49c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/listScreenshotsTaken</testCaseId>
+      <testCaseId>Test Cases/findScreenshotsTaken</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

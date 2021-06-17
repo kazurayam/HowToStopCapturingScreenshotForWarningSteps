@@ -5,13 +5,12 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 WebUI.openBrowser('')
 WebUI.navigateToUrl('http://demoaut.katalon.com/')
+
 TestObject tObj = createTestObject("//a[@id='btn-make-DISappointment']")
 
-// WebUI.verifyElementPresent(tObj, 5, FailureHandling.STOP_ON_FAILURE)
-WebUI.verifyElementPresent(tObj, 5, FailureHandling.OPTIONAL)
+WebUI.verifyElementPresent(tObj, 3, FailureHandling.OPTIONAL)
 
 WebUI.closeBrowser()
-
 
 def createTestObject(String xpath) {
 	TestObject tObj = new TestObject(xpath)
