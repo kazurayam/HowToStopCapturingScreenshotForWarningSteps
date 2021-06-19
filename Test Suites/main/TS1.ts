@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TS2</name>
+   <name>TS1</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,23 +10,17 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>fe6793b4-ee7a-4e5c-96f6-09cdd3e2be09</testSuiteGuid>
+   <testSuiteGuid>6e0a0e19-ca18-4185-8f76-75b78c700767</testSuiteGuid>
    <testCaseLink>
-      <guid>37e01d10-792d-4a3a-b16e-983797406787</guid>
+      <guid>b0375214-730c-4bf7-820e-3cb142ac5856</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/demoStepFailed</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>1b704d41-685f-42e8-a65e-967d47eeeb92</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TC</testCaseId>
+      <testCaseId>Test Cases/main/TC1</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>60fa5c43-681f-4677-b2af-40b0994ce49c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/findScreenshotsTaken</testCaseId>
+      <testCaseId>Test Cases/main/findScreenshotsTaken</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

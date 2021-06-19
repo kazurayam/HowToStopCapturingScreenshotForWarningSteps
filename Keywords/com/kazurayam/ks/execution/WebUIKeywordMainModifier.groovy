@@ -22,13 +22,14 @@ public class WebUIKeywordMainModifier {
 				if (flHandling == FailureHandling.OPTIONAL) {
 					takeScreenShot = false
 				}
-				return KeywordMain.stepFailed(message, flHandling, new StepFailedException(message, t),
+				KeywordMain.stepFailed(message, flHandling, new StepFailedException(message, t),
 						new WebUIScreenCaptor().takeScreenshotAndGetAttributes(takeScreenShot));
 			} else {
 				// do as usual
 				println("[WebUIKeywordMainModifier] WebUIKeywordMain.${name} method is executed as usual")
-				return delegate.metaClass.getStaticMetaMethod(name, args).invoke(delegate, args)
+				delegate.metaClass.getStaticMetaMethod(name, args).invoke(delegate, args)
 			}
 		}
 	}
+
 }

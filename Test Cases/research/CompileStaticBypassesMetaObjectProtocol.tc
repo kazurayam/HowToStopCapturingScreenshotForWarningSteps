@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CompileStaticBypassesMetaObjectProtocol</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ec3b2b30-d5c1-4d66-9e31-80135675b187</testCaseGuid>
+</TestCaseEntity>

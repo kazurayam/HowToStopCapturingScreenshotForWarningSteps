@@ -3,9 +3,13 @@ import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
+import com.kazurayam.ks.execution.WebUIKeywordMainModifier
+ 
+// The spell to stop capturing screenshot for warning steps
+WebUIKeywordMainModifier.modify()
+
 WebUI.openBrowser('')
 WebUI.navigateToUrl('http://demoaut.katalon.com/')
-
 TestObject tObj = createTestObject("//a[@id='btn-make-DISappointment']")
 
 WebUI.verifyElementPresent(tObj, 3, FailureHandling.OPTIONAL)
