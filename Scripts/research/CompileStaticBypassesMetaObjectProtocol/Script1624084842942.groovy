@@ -1,3 +1,6 @@
+/**
+ * https://magazine.rubyist.net/articles/0037/0037-GuestTalk.html
+ */
 import groovy.transform.CompileStatic
 
 class Reporter {
